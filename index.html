@@ -48,6 +48,91 @@
   strong { color: var(--ink); font-weight: 700; }
   a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 3px; }
   .divider { height: 1px; background: var(--line); margin: 64px 0; }
+  .other-apps {
+    margin-top: 88px;
+    padding-top: 32px;
+    border-top: 1px solid var(--line);
+  }
+
+  .other-title {
+    font-size: 12px;
+    font-weight: 500;
+    letter-spacing: 0.12em;
+    color: var(--muted);
+    margin: 0 0 20px;
+  }
+
+  .app-list {
+    display: grid;
+    gap: 12px;
+  }
+
+  .app-card {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 14px 16px;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    text-decoration: none;
+    color: inherit;
+    transition: border-color 0.15s ease, transform 0.15s ease;
+  }
+
+  .app-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-1px);
+  }
+
+  .app-card-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 22.4%;
+    flex: none;
+    display: block;
+  }
+
+  .app-card-icon.is-text {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--panel);
+    border: 1px solid var(--line);
+    font-size: 15px;
+    font-weight: 600;
+    color: var(--muted);
+  }
+
+  .app-card-meta {
+    min-width: 0;
+  }
+
+  .app-card-name {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--ink);
+    line-height: 1.6;
+  }
+
+  .app-card-desc {
+    font-size: 12.5px;
+    color: var(--dim);
+    line-height: 1.6;
+  }
+
+  .app-card-arrow {
+    margin-left: auto;
+    color: var(--dim);
+    flex: none;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .app-card {
+      transition: none;
+    }
+  }
+
   footer { margin-top: 64px; padding-top: 24px; border-top: 1px solid var(--line); color: var(--dim); font-size: 13px; }
   .lang-note { color: var(--dim); font-size: 13px; margin-top: 4px; }
 </style>
@@ -142,6 +227,129 @@
 
     <h2><span class="n">8</span>Contact</h2>
     <p>For questions about this policy, contact <a href="mailto:akagamisora@gmail.com">akagamisora@gmail.com</a>.</p>
+  </section>
+
+  <section class="other-apps">
+    <h2 class="other-title">OTHER APPS BY AKAGAMISORA</h2>
+    <div class="app-list">
+      <a
+        class="app-card"
+        href="https://akagamisora.github.io/mannaka-privacy/"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          class="app-card-icon"
+          src="https://akagamisora.github.io/mannaka-privacy/app-icon.png"
+          alt=""
+        />
+        <div class="app-card-meta">
+          <div class="app-card-name">まんなか - 集合駅を公平に提案</div>
+          <div class="app-card-desc">参加者の最寄り駅から、「ちょうど真ん中」の集合駅を提案</div>
+        </div>
+        <span class="app-card-arrow">→</span>
+      </a>
+      <a
+        class="app-card"
+        href="https://akagamisora.github.io/gamanchokin-privacy/"
+        target="_blank"
+        rel="noopener"
+      >
+        <span class="app-card-icon is-text" aria-hidden="true">貯</span>
+        <div class="app-card-meta">
+          <div class="app-card-name">がまん貯金 - 我慢した分だけ貯めてご褒美</div>
+          <div class="app-card-desc">我慢して浮いたお金を貯めて、ごほうびに使う</div>
+        </div>
+        <span class="app-card-arrow">→</span>
+      </a>
+      <a
+        class="app-card"
+        href="https://akagamisora.github.io/hitokoma-privacy/"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          class="app-card-icon"
+          src="https://akagamisora.github.io/hitokoma-privacy/app-icon.png"
+          alt=""
+        />
+        <div class="app-card-meta">
+          <div class="app-card-name">ひとこま - 写真と一言の日記</div>
+          <div class="app-card-desc">写真 1 枚と一言、地図で振り返るフォトログ</div>
+        </div>
+        <span class="app-card-arrow">→</span>
+      </a>
+      <a
+        class="app-card"
+        href="https://akagamisora.github.io/zutto-minesweeper-privacy/"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          class="app-card-icon"
+          src="https://akagamisora.github.io/zutto-minesweeper-privacy/app-icon.png"
+          alt=""
+        />
+        <div class="app-card-meta">
+          <div class="app-card-name">ずっとマインスイーパー</div>
+          <div class="app-card-desc">推測なしで必ず解ける、終わらない 9×9 マインスイーパー</div>
+        </div>
+        <span class="app-card-arrow">→</span>
+      </a>
+      <a
+        class="app-card"
+        href="https://akagamisora.github.io/dakke-privacy/"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          class="app-card-icon"
+          src="https://akagamisora.github.io/dakke-privacy/app-icon.png"
+          alt=""
+        />
+        <div class="app-card-meta">
+          <div class="app-card-name">Dakke</div>
+          <div class="app-card-desc">「あの人、誰だっけ」をなくす、顔から引く出会いの記録</div>
+        </div>
+        <span class="app-card-arrow">→</span>
+      </a>
+      <a
+        class="app-card"
+        href="https://akagamisora.github.io/shitsukoi-alarm-privacy/"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          class="app-card-icon"
+          src="https://akagamisora.github.io/shitsukoi-alarm-privacy/app-icon.png"
+          alt=""
+        />
+        <div class="app-card-meta">
+          <div class="app-card-name">しつこいアラーム - 締切まで何度も鳴らす</div>
+          <div class="app-card-desc">
+            間に合わせたい時刻まで、その手前から何度でも鳴らす
+          </div>
+        </div>
+        <span class="app-card-arrow">→</span>
+      </a>
+      <a
+        class="app-card"
+        href="https://akagamisora.github.io/hottoku-privacy/"
+        target="_blank"
+        rel="noopener"
+      >
+        <img
+          class="app-card-icon"
+          src="https://akagamisora.github.io/hottoku-privacy/app-icon.png"
+          alt=""
+        />
+        <div class="app-card-meta">
+          <div class="app-card-name">ほっとく - 休憩タイマーと手放した記録</div>
+          <div class="app-card-desc">休むと決めたら押すだけ。休んだ時間と手放したことが溜まる</div>
+        </div>
+        <span class="app-card-arrow">→</span>
+      </a>
+    </div>
   </section>
 
   <footer>
